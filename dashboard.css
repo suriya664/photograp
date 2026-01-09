@@ -12,6 +12,10 @@
     overflow-x: hidden;
 }
 
+body.dark-theme .dashboard-wrapper {
+    background: var(--bg-color);
+}
+
 /* Sidebar Styles */
 .dashboard-sidebar {
     width: 280px;
@@ -324,6 +328,11 @@ body.dark-theme .dashboard-sidebar {
     flex-direction: column;
     visibility: visible;
     opacity: 1;
+    background: var(--bg-color);
+}
+
+body.dark-theme .dashboard-main {
+    background: var(--bg-color);
 }
 
 .dashboard-sidebar.collapsed ~ .dashboard-main {
@@ -451,6 +460,11 @@ body.dark-theme .dashboard-header {
 .dashboard-content {
     padding: 30px 30px;
     text-align: center;
+    background: var(--bg-color);
+}
+
+body.dark-theme .dashboard-content {
+    background: var(--bg-color);
 }
 
 .dashboard-content > * {
@@ -735,6 +749,157 @@ body.dark-theme .data-table-wrapper {
 body.dark-theme .dashboard-section {
     background: rgba(26, 26, 26, 0.8);
     border: 1px solid rgba(192, 192, 192, 0.1);
+}
+
+body.dark-theme .dashboard-main {
+    background: var(--bg-color);
+}
+
+body.dark-theme .dashboard-content {
+    background: var(--bg-color);
+}
+
+body.dark-theme .dashboard-wrapper {
+    background: var(--bg-color);
+}
+
+body.dark-theme .booking-card {
+    background: var(--bg-secondary);
+    border: 1px solid rgba(192, 192, 192, 0.1);
+    color: var(--text-color);
+}
+
+body.dark-theme .section-title {
+    color: var(--text-color);
+}
+
+body.dark-theme .sidebar-menu-item {
+    color: var(--text-color);
+}
+
+body.dark-theme .sidebar-menu-item:hover {
+    background: rgba(184, 115, 51, 0.1);
+    color: var(--molten-copper);
+}
+
+body.dark-theme .sidebar-menu-item.active {
+    background: rgba(184, 115, 51, 0.15);
+    color: var(--molten-copper);
+}
+
+body.dark-theme .sidebar-logo-text {
+    color: var(--text-color);
+}
+
+body.dark-theme .data-table th {
+    color: var(--text-light);
+    border-bottom-color: rgba(192, 192, 192, 0.1);
+}
+
+body.dark-theme .data-table td {
+    color: var(--text-color);
+    border-bottom-color: rgba(192, 192, 192, 0.1);
+}
+
+body.dark-theme .data-table tbody tr:hover {
+    background: rgba(184, 115, 51, 0.1);
+}
+
+body.dark-theme .stat-card-title {
+    color: var(--text-light);
+}
+
+body.dark-theme .stat-card-value {
+    color: var(--text-color);
+}
+
+body.dark-theme .booking-card {
+    background: var(--bg-secondary);
+    border: 1px solid rgba(192, 192, 192, 0.1);
+    color: var(--text-color);
+}
+
+body.dark-theme .booking-card-title {
+    color: var(--text-color);
+}
+
+body.dark-theme .calendar-day {
+    background: var(--bg-secondary);
+    border-color: rgba(192, 192, 192, 0.1);
+    color: var(--text-color);
+}
+
+body.dark-theme .calendar-day:hover {
+    background: rgba(184, 115, 51, 0.15);
+    border-color: var(--molten-copper);
+}
+
+body.dark-theme .calendar-day.has-booking {
+    background: rgba(184, 115, 51, 0.2);
+    border-color: var(--molten-copper);
+}
+
+body.dark-theme .calendar-day-number {
+    color: var(--text-color);
+}
+
+body.dark-theme .form-group label {
+    color: var(--text-color);
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group select,
+body.dark-theme .form-group textarea {
+    background: var(--bg-secondary);
+    border-color: rgba(192, 192, 192, 0.1);
+    color: var(--text-color);
+}
+
+body.dark-theme .form-group input:focus,
+body.dark-theme .form-group select:focus,
+body.dark-theme .form-group textarea:focus {
+    border-color: var(--molten-copper);
+    background: var(--card-bg);
+}
+
+body.dark-theme .action-btn {
+    background: var(--bg-secondary);
+    border-color: rgba(192, 192, 192, 0.1);
+    color: var(--text-color);
+}
+
+body.dark-theme .data-table-title {
+    color: var(--text-color);
+}
+
+body.dark-theme .upload-area {
+    background: var(--bg-secondary);
+    border-color: rgba(192, 192, 192, 0.1);
+}
+
+body.dark-theme .upload-area-text {
+    color: var(--text-light);
+}
+
+body.dark-theme .booking-info-item {
+    color: var(--text-color);
+}
+
+body.dark-theme .booking-info-item i {
+    color: var(--molten-copper);
+}
+
+body.dark-theme .status-badge {
+    background: var(--bg-secondary);
+    border-color: rgba(192, 192, 192, 0.1);
+}
+
+body.dark-theme .sidebar-user-name {
+    color: var(--text-color);
+}
+
+body.dark-theme .sidebar-user-role {
+    color: var(--text-light);
 }
 
 .section-title {

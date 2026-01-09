@@ -4,6 +4,13 @@
 
 // Initialize Dashboard
 document.addEventListener('DOMContentLoaded', function() {
+    // Load theme from localStorage first (check both keys for compatibility)
+    const savedTheme = localStorage.getItem('darkTheme') || localStorage.getItem('theme');
+    if (savedTheme === 'true' || savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        document.documentElement.classList.add('dark-theme');
+    }
+    
     initSidebar();
     initThemeToggle();
     initMobileMenu();
@@ -90,14 +97,26 @@ function initThemeToggle() {
     if (themeToggle) {
         themeToggle.addEventListener('click', function() {
             document.body.classList.toggle('dark-theme');
+            document.documentElement.classList.toggle('dark-theme');
             const isDark = document.body.classList.contains('dark-theme');
             localStorage.setItem('darkTheme', isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
         
-        // Restore theme preference
-        const savedTheme = localStorage.getItem('darkTheme');
-        if (savedTheme === 'true') {
+        // Restore theme preference (check both keys for compatibility)
+        const savedTheme = localStorage.getItem('darkTheme') || localStorage.getItem('theme');
+        if (savedTheme === 'true' || savedTheme === 'dark') {
             document.body.classList.add('dark-theme');
+            document.documentElement.classList.add('dark-theme');
+        }
+    }
+    
+    // Also check on page load if no toggle button exists
+    const savedTheme = localStorage.getItem('darkTheme') || localStorage.getItem('theme');
+    if (savedTheme === 'true' || savedTheme === 'dark') {
+        if (!document.body.classList.contains('dark-theme')) {
+            document.body.classList.add('dark-theme');
+            document.documentElement.classList.add('dark-theme');
         }
     }
 }
