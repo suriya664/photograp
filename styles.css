@@ -3346,6 +3346,41 @@ body.dark-theme .typing-text {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
+    
+    /* Navigation fixes for 1024px - Tab-like alignment */
+    .nav-menu {
+        gap: 4px;
+        align-items: center;
+    }
+    
+    .nav-link {
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        background: transparent;
+        border: 1px solid transparent;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        background: rgba(184, 115, 51, 0.1);
+        border-color: var(--molten-copper);
+        color: var(--molten-copper);
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-right {
+        gap: 10px;
+    }
+    
+    .nav-dashboard-btn,
+    .nav-auth-btn {
+        padding: 8px 16px !important;
+        font-size: 0.9rem !important;
+    }
 }
 
 /* Tablet */
@@ -4221,6 +4256,87 @@ body.dark-theme .typing-text {
     .contact-form-wrapper,
     .booking-form-wrapper {
         padding: 20px 15px;
+    }
+    
+    .contact-form-wrapper {
+        height: auto;
+        min-height: 500px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .contact-item {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .contact .section-header {
+        text-align: center;
+    }
+    
+    .contact-info {
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .contact-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        max-width: 280px;
+    }
+    
+    .contact-social {
+        text-align: center;
+    }
+    
+    .social-links-large {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .contact-form-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-form {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 
